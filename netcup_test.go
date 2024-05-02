@@ -1,4 +1,4 @@
-package netcup
+package dns
 
 import (
 	"fmt"

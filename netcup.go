@@ -1,4 +1,4 @@
-package netcup
+package dns
 
 import (
 	"github.com/caddyserver/caddy/v2"
@@ -32,11 +32,11 @@ func (p *Provider) Provision(ctx caddy.Context) error {
 
 // UnmarshalCaddyfile sets up the DNS provider from Caddyfile tokens. Syntax:
 //
-// netcup {
-//     customer_number <customer_number>
-//     api_key <api_key>
-//     api_password <api_password>
-// }
+//	netcup {
+//	    customer_number <customer_number>
+//	    api_key <api_key>
+//	    api_password <api_password>
+//	}
 func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 	for d.Next() {
 		if d.NextArg() {
